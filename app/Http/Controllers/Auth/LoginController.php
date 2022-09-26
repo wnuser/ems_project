@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use \Illuminate\Http\Request;
+
 
 class LoginController extends Controller
 {
@@ -37,4 +39,29 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    protected function credentials(Request $request)
+    {
+        return ['email' => $request->email, 'password' => $request->password];   
+    }
+
+    /**
+     * fucntion for redirect user on the basis of their roles 
+    */
+    protected function redirectTo()
+    {
+        if (auth()->user()->user_type == config('role.ROLES.ADMIN.ROLE')) {
+            return route('admin.dashboard');
+        } elseif (auth()->user()->user_type == config('role.ROLES.SUBADMIN.ROLE')) {
+            return route('profile');
+        } elseif (auth()->user()->user_type == config('role.ROLES.CUSTOMER.ROLE')) {
+            return route('profile');
+        } else{
+            return route('profile');
+        }
+    }
+
+
+
+
 }
