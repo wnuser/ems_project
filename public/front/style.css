@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Work Sans', sans-serif;
+	background-color:#ebebeb !important;
+}
+.theme-color-1{
+	background-color: #aa39ff;
+}
+.theme-color-2{
+	background-color: #1e007b;
+}
+.btn-custom{
+	background-color: #aa39ff;
+	background: linear-gradient(#aa39ff, #aa39ff);
+    color: #fff;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 5px;
+	transition: .4s;
+}
+.btn-custom:hover{
+	border: none;
+	background-color: #fff;
+	background: linear-gradient(45deg, #39b2ff, #aa39ff);
+	color: #fff;
+	transition: .4s;
+}
+.btn-custom:focus{
+	outline: none;
+}
+.custom-2{
+	background: linear-gradient(#39b2ff, #39b2ff);
+}
+img{
+	height: auto;
+	max-width: 100%;
+}
+.container-custom{
+	max-width: 90%;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+	background-color: #fff;
+	min-height: 100vh;
+	border: 30px solid #fff;
+    border-top-color: #aa39ff;
+	border-bottom-color: #aa39ff;
+}
+.container-custom .head-para{
+	background-color: #1e007b;
+	color: #fff;
+	padding: 10px;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+.bordered-para{
+	padding: 7px 11px;
+    border-radius: 6px;
+    text-align: left;
+    border: 1px solid #c6c6c6;
+}
+.inner-wrap-main .nav-link.btn-custom{
+	margin-right: 10px;
+	border: none;
+}
+.inner-wrap-main .nav-link.btn-custom.active{
+	background-color: #aa39ff;
+    color: #fff;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 5px;
+}
+.inner-wrap-main .nav-tabs{
+	padding-bottom: 20px;
+}
+.experiments-col .rat-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 330px;
+	min-height: 240px;
+    margin: auto;
+}
+.experiments-col .rat-wrapper img{
+	width: 70px;
+    height: 80px;
+    object-fit: contain;
+	display: block;
+}
+.experiments-col .pt-large{
+	padding-top: 200px;
+	text-align: center;
+}
+.experiments-col .pt-large span{
+	display: inline-block;
+}
+.experiments-col .head-para{
+	padding: 2px 27px;
+}
+.experiments-col .tube-box img{
+	max-width: 70px;
+	display: block;
+	margin-bottom: 20px;
+}
+.experiments-col .tube-box.tube-hide{
+	display: none !important;
+}
+.experiments-col .video-wrapper,
+.experiments-col .video-wrapper-final{
+	position: absolute;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    left: 0;
+	display: none;
+}
+.experiments-col .video-wrapper-final.show-vd{
+	display: block;
+	z-index: 11;
+}
+/* moving rats */
+.rat-wrapper.move-rat img{
+	transition: .8s;
+	position: absolute;
+	cursor: pointer;
+	z-index: 1;
+}
+.rat-wrapper.move-rat #rat1{
+	transform: translate(-400px , 255px);
+	left: 130px;
+    top: -16px;	
+}
+.rat-wrapper.move-rat #rat3{
+	transform: translate(-350px , 250px);
+	left: 225px;
+    top: -16px;	
+}
+.rat-wrapper.move-rat #rat6{
+	transform: translate(-490px , 239px);
+	left: 274px;
+    top: 52px;	
+}
+.rat-wrapper.move-rat #rat8{
+	transform: translate(-430px , 235px);
+	left: 240px;
+    top: 4px;	
+}
+.rat-wrapper.move-rat #rat9{
+	transform: translate(-320px , 95px);
+	left: 178px;
+    top: 193px;
+}
+.rat-wrapper.move-rat #rat11{
+	transform: translate(-462px , 164px);
+	left: 183px;
+    top: 126px;
+}
+.rat-wrapper.move-rat #rat2{
+	transform: translate(370px, 268px);
+	left: 165px;
+    top: -28px;
+}
+.rat-wrapper.move-rat #rat4{
+	transform: translate(415px, 262px);	
+	left: 190px;
+    top: -24px;	
+}
+.rat-wrapper.move-rat #rat5{
+	transform: translate(427px, 240px);	
+	left: 30px;
+    top: 1px;	
+}
+.rat-wrapper.move-rat #rat7{
+	transform: translate(391px, 195px);	
+	left: 137px;
+    top: 96px;
+}
+.rat-wrapper.move-rat #rat10{
+	transform: translate(455px, 170px);	
+	left: 155px;
+    top: 119px;
+}
+.rat-wrapper.move-rat #rat12{
+	transform: translate(410px, 162px);	
+	left: 60px;
+    top: 130px;	
+}
+
+.rat-wrapper .after-moving-rat{
+	visibility: hidden;
+	opacity: 0;
+	width: 0;
+	max-width: 100%;
+	height: 0;
+	position: absolute;
+	transition: 4.2s;
+}
+.rat-wrapper.move-rat .after-moving-rat{
+	visibility: visible;
+	opacity: 1;
+	width: auto;
+	position: absolute;
+	max-width: 100%;
+	height: auto;
+}
+.calculation-box{
+	display: none;
+}
+.calculation-box input{
+	max-width: 90px;
+}
+.rat-wrapper .tray-rat{
+	pointer-events: none;
+}
+.rat-wrapper.move-rat .tray-rat{
+	pointer-events: all;
+}

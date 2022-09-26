@@ -55,7 +55,7 @@ class LoginController extends Controller
         } elseif (auth()->user()->user_type == config('role.ROLES.SUBADMIN.ROLE')) {
             return route('profile');
         } elseif (auth()->user()->user_type == config('role.ROLES.CUSTOMER.ROLE')) {
-            return route('profile');
+            return route('home');
         } else{
             return route('profile');
         }
