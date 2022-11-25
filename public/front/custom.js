@@ -1,30 +1,51 @@
+function test() {
+	alert('test alert');
+}
 
 var downloadTimer;
+var rat_type;
+var rat_number;
+var ratType;
+var ratNumber;
+var testVar = 12121212;
+var defaultcounter = 4;
 
 $( document ).ready(function() {
-  $("#administer").click(function () {
-    $(".video-wrapper").show();
-    $(this).addClass("disabled");
+	$("#administer").click(function () {
+		$(".video-wrapper").show();
+		$(this).addClass("disabled");
+	});
 });
+
+function testfunc()
+{
+   // logic for reload video 
+  const video = document.getElementById('video1');
+  video.play();
+}
 
 
 $(".tray-rat").click(function () {
-  console.log('tessssss');
   
   $(this).hide();
   var rat_type   = $(this).attr("ratType");
   var rat_number = $(this).attr("ratNumber");
+  defaultcounter = $(this).attr("counter");
+  defaultcounter  = parseInt(defaultcounter) + 1;
   console.log(rat_type+"rat_type");
-  
+
+  ratType    = rat_type;
+  ratNumber  = rat_number;
 
   $(".video-wrapper-final").addClass("show-vd");
-  $(".calculation-box").show();
 
-  // logic for reload video
-  const video = document.getElementById('video2');
-  video.pause();
+  const video = document.getElementById('video1');
+  // video.pause();
   video.currentTime = 0;
   video.load();
+  video.play();
+
+  $(".calculation-box").show();
 
   // logic for refresh counter 
   clearInterval(downloadTimer);
@@ -32,35 +53,63 @@ $(".tray-rat").click(function () {
 
   // logic for getting data from inputs and storing in table and local storage 
 
-  var inputA  = $('#input-a').val();
+});
+
+
+function saveReading() {
+
+  var Experiment1_1_a = 135;
+  var Experiment1_2_a = 164;
+  var Experiment1_3_a = 150;
+  var Experiment1_4_a = 140;
+  var Experiment1_5_a = 137;
+  var Experiment1_6_a = 158;
+
   var inputB  = $('#input-b').val();
 
-  var subsResult   = parseInt(inputA) - parseInt(inputB);
-  var divideResult = parseInt(parseInt(subsResult)*100)/parseInt(inputA);
+  if(ratType == 1) {
+    var subsResult   = parseInt(Experiment1_1_a) - parseInt(inputB);
+  } else {
+    var subsResult   = parseInt(inputB) - parseInt(Experiment1_1_a);
+  }
+
+
+  var divideResult = parseInt(parseInt(subsResult)*100)/parseInt(Experiment1_1_a);
+
 
   if(subsResult) {
 
-      if(rat_type == 1) {
+    // var ratNumber  = rat_number;
+    // var ratType    = rat_type;
+    console.log(ratNumber, 'rat_number',ratType);
+    
+      if(ratType == 1) {
 
-        document.getElementById("ch_"+rat_number+"_a").innerHTML    = inputA;
-        document.getElementById("ch_"+rat_number+"_b").innerHTML    = inputB;
-        document.getElementById("ch_"+rat_number+"_ab").innerHTML   = (subsResult).toFixed(2);
-        document.getElementById("ch_"+rat_number+"_per").innerHTML  = (divideResult).toFixed(2);
+        document.getElementById("ch_"+ratNumber+"_b").innerHTML    = inputB;
+        document.getElementById("ch_"+ratNumber+"_ab").innerHTML   = (subsResult).toFixed(2);
+        document.getElementById("ch_"+ratNumber+"_per").innerHTML  = (divideResult).toFixed(2);
       }  
+
+      if(ratType ==2 ){
+
+        document.getElementById("ca_"+ratNumber+"_b").innerHTML    = inputB;
+        document.getElementById("ca_"+ratNumber+"_ab").innerHTML   = (subsResult).toFixed(2);
+        document.getElementById("ca_"+ratNumber+"_per").innerHTML  = (divideResult).toFixed(2);
+        
+      }
   }
   
-  $('#input-a').val('');
   $('#input-b').val('');
 
-  console.log(inputA+"   "+inputB+" "+subsResult+" "+divideResult);
+  // console.log(inputA+"   "+inputB+" "+subsResult+" "+divideResult);
   
   console.log('last test');
-  
-});
+}
+
 
 function handleCounter(start) {
 
-  var timeleft  = 60;
+  var timeleft  = defaultcounter;
   var starttime = start;
   downloadTimer = setInterval(function(){
 
@@ -74,12 +123,12 @@ function handleCounter(start) {
 
 }
 
-
   $('#back2').click(function(e){
     e.preventDefault();
     $('#nav-profile').tab('show');
-  })
-});
+  });
+
+// });
 
 document.getElementById('video1').addEventListener('ended',myHandler,false);
     function myHandler(e) {
@@ -89,3 +138,4 @@ document.getElementById('video1').addEventListener('ended',myHandler,false);
         $(".tube-box").addClass("tube-hide");
     }
   
+

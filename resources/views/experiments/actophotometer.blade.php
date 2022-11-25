@@ -1,130 +1,186 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-<section class="experiment-1">
-	<div class="container-custom">
-		<div class="inner-wrap-main">
-			<p class="head-para text-center">-- Effect of drug on Locomotor Activity of Mice using Actophotometer --</p>
-			<nav>
-				<div class="nav nav-tabs" id="nav-tab" role="tablist">
-				  <button class="nav-link active btn-custom" id="nav-home-tab" data-toggle="tab" data-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Introduction</button>
-				  <button class="nav-link btn-custom" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Experiment</button>
-				  <button class="nav-link btn-custom" id="nav-contact-tab" data-toggle="tab" data-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Observation</button>
+
+<section class="main-bg">
+	<div class="inner-wrap-main">
+		<div class="ems-left">
+			<div class="ems-logo">
+				<a href="{{ route('home') }}"><img src=" {{ asset('images/ems-logo.png') }} " /></a>
+			</div>
+			<div class="nav nav-tabs" id="nav-tab" role="tablist">
+				<button class="nav-link btn-custom active" id="nav-introduction" data-toggle="tab" data-target="#nav-introduction-txt" type="button"><i class="bi bi-grid"></i> Introduction</button>
+				<button class="nav-link btn-custom" id="nav-instructions" data-toggle="tab" data-target="#nav-instructions-txt" type="button"><i class="bi bi-bar-chart"></i> Instructions</button>
+				<button class="nav-link btn-custom" onclick="testfunc()" id="nav-experiment" data-toggle="tab" data-target="#nav-experiment-txt" type="button"><i class="bi bi-chat"></i> Experiment</button>
+				<button class="nav-link btn-custom" id="nav-observations" data-toggle="tab" data-target="#nav-observations-txt" type="button"><i class="bi bi-gear"></i> Observations</button>
+			</div>
+			<div class="ems-left-bottom">
+				<div class="ems-btm-bg">
+					<h3>Support 24/7</h3>
+					<h4>Contacts us anytime</h4>
+					<a href="#" class="btn btn-primary mt-3">start</a>
+					<img src="{{ asset('images/mask-group.png') }}" />
 				</div>
-			  </nav>
-			  <div class="tab-content" id="nav-tabContent">
-				<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"> 
-					<div class="intro text-center py-3">
-						<h2>Equipment</h2>
-						<img src="images/actophotometer.jpg" alt="" class="img-fluid mb-5"/>
-						<p class="bordered-para">Actophotometer has a central chamber with arrangement of light sources and photocells at the base of two opposite walls.The light of each source is focused on a photocell. Any Interruption in the path of light activates the photocells and this is counted as a measure of horizontal locomotor activity of the mice kept in the chamber.</p>
+			</div>
+		</div>
+		<div class="tab-content ems-right" id="nav-tabContent">
+
+			<div class="tab-pane fade show active" id="nav-introduction-txt" role="tabpanel" aria-labelledby="nav-introduction">
+				<div class="main-tab-txt">
+					<div class="main-title d-flex align-items-center pb-3">
+						<h2>Introduction</h2>
+						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
 					</div>
-
+					<h3 class="h3 pb-4">Effect of drug on Locomotor Activity of Mice using Actophotometer</h3>
+					<div class="ems-box">
+						<div class="ems-box-img">
+							<img src="{{ asset('images/actophotometer.jpg') }}" alt="" class="img-fluid"/>
+						</div>
+						<div class="ems-box-text">
+							<p class="text-white">Actophotometer has a central chamber with arrangement of light sources and photocells at the base of two opposite walls.The light of each source is focused on a photocell. Any Interruption in the path of light activates the photocells and this is counted as a measure of horizontal locomotor activity of the mice kept in the chamber.</p>
+						</div>
+					</div>
 				</div>
-				<div class="tab-pane fade experiments-col-tabs" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+				
+				<div class="pt-3 d-flex">
+					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
+				</div>
+			</div>
 
-					<div class="experiments-col py-4">
-						<div class="row">
-							<div class="col-12 text-right">
-								<a href="#instructions" data-toggle="modal" class="btn btn-custom custom-2 instructions-anchor">Instruction</a>
-							</div>
-							<div class="col-lg-4 pt-large">
-								<span class="head-para">Vehicle Treated</span>
-								<img src="images/tray.jpg" alt="" class="img-fluid"/>
-							</div>
-							<div class="col-lg-4">
-								<div class="rat-wrapper">
-									<img src="images/rats/rat-1.png" alt="" id="rat1" ratType="1" ratNumber="1" class="tray-rat"/>
-									<img src="images/rats/rat-1.png" alt="" id="rat2" class="tray-rat"/>
-									<img src="images/rats/rat-1.png" alt="" id="rat3" class="tray-rat"/>
-									<img src="images/rats/rat-1.png" alt="" id="rat4" class="tray-rat"/>
-									<img src="images/rats/rat-1.png" alt="" id="rat5" class="tray-rat"/>
-									<img src="images/rats/rat-1.png" alt="" id="rat6" class="tray-rat"/>
-									<img src="images/rats/rat-1.png" alt="" id="rat7" class="tray-rat"/>
-									<img src="images/rats/rat-1.png" alt="" id="rat8" ratType="1" ratNumber="3" class="tray-rat"/>
-									<img src="images/rats/rat-1.png" alt="" id="rat9"  class="tray-rat"/>
-									<img src="images/rats/rat-1.png" alt="" id="rat10" class="tray-rat"/>
-									<img src="images/rats/rat-1.png" alt="" id="rat11" ratType="1" ratNumber="2" class="tray-rat"/>
-									<img src="images/rats/rat-1.png" alt="" id="rat12" class="tray-rat"/>
-									<img src="images/actophotometer.jpg" alt="" class="after-moving-rat"/>
-								</div>
-								<div class="video-wrapper">
-									<video id="video1" width="300" height="240" controls="" muted="" autoplay>
-										<source src="images/oral.mp4" type="video/mp4">
-					  				</video>
-								</div>
+			<div class="tab-pane fade" id="nav-instructions-txt" role="tabpanel" aria-labelledby="nav-instructions">
+				<div class="main-tab-txt">
+					<div class="main-title d-flex align-items-center pb-3">
+						<h2>Instructions</h2>
+						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+					</div>
+					<div class="ems-box-white instruction-list">
+						<ul class="list-unstyled">
+							<li><i class="bi bi-hand-thumbs-up pr-4"></i> Animals are divided into two groups (6 animals in each).</li>
+							<li><i class="bi bi-hand-thumbs-up pr-4"></i> Administer one group with the drug to be tested and other with vehicle by oral route.</li>
+							<li><i class="bi bi-hand-thumbs-up pr-4"></i> Put one animal at a time in the Actophotometer.</li>
+							<li><i class="bi bi-hand-thumbs-up pr-4"></i> Start the instrument.</li>
+							<li><i class="bi bi-hand-thumbs-up pr-4"></i> Count the locomotor activity for 10 minutes.</li>
+							<li><i class="bi bi-hand-thumbs-up pr-4"></i> Repeat the procedure at the interval of 30 minutes.</li>
+							<li><i class="bi bi-hand-thumbs-up pr-4"></i> Record the observations.</li>
+							<li><i class="bi bi-hand-thumbs-up pr-4"></i> The mice in test group are injected Diazepam (1 Mg /kg Oral) and locomotor activity is measures twice as stated above.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="pt-3 d-flex">
+					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
+					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
+				</div>
+			</div>
 
-							    <!--- video section  -->
-								<div class="video-wrapper-final">
-									<video id="video2" width="300" height="240" controls="" muted="" autoplay>
-										<source src="images/actophotometer.mp4" type="video/mp4">
-					  				</video>
-								</div>
+			<div class="tab-pane fade" id="nav-experiment-txt" role="tabpanel" aria-labelledby="nav-experiment">
+				<div class="main-tab-txt">
+					<div class="main-title d-flex align-items-center pb-3">
+						<h2>Experiment</h2>
+						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+					</div>
+					
+					<div class="row align-items-end">
+						<div class="col-md-6">
+							<div class="boxes">
+								<h3>Vehicle Treated</h3>
+								<div class="box-grp">
+									<div class="tray-box">
+										<img src="{{ asset('images/tray.png') }}" class="img-fluid"/>
+										<ul>
+											<li><img id="rat1" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="1" ratNumber="1" counter="69" class="tray-rat" /></li>
+											<li><img id="rat2" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="1" ratNumber="2" counter="84" class="tray-rat" /></li>
+											<li><img id="rat3" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="1" ratNumber="3" counter="75" class="tray-rat" /></li>
+											<li><img id="rat4" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="1" ratNumber="4" counter="71" class="tray-rat" /></li>
+											<li><img id="rat5" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="1" ratNumber="5" counter="68" class="tray-rat" /></li>
+											<li><img id="rat6" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="1" ratNumber="6" counter="68" class="tray-rat"/></li>
 
-								<div class="action-wrapper text-center py-4">
-									<a href="javascript:void(0)" class="btn btn-custom" id="administer">Administer</a>
-								</div>
-								<div class="d-flex justfy-content-between tube-box">
-									<div class="w-50">
-										<img src="images/tube.png" alt=""/>
-										<span class="head-para">Vehicle</span>
+										</ul>
 									</div>
-									<div class="w-50 text-right">
-										<img src="images/tube.png" alt="" class="ml-auto"/>
-										<span class="head-para">Vehicle</span>
-									</div>
-								</div>
-								<div class="calculation-box py-3">
-									<div class="meter text-center pb-3">
-										<span>Counter = </span><span id="counter-span"></span>
-									</div>
-									<div class="table-cal">
-										<table class="table table-bordered text-center">
-											<thead>
-											  <tr>
-												<th scope="col" >Group Selected</th>
-												<th scope="col" >Locomotor Index</th>
-												<th scope="col" >No. of Rearings</th>
-											  </tr>
-											</thead>
-											<tbody>
-											  <tr>
-												<td>Vehicle Treated	</td>
-												<td><input type="number" name="" id="input-a"></td>
-												<td><input type="number" name="" id="input-b"></td>
-											  </tr>
-											</tbody>
-										  </table>
+									<div class="tube-box">
+										<img src="{{ asset('images/tube.png') }}" class="img-fluid" />
+										<p>Vehicle</p>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-4 pt-large">
-								<span class="head-para">Drug Treated</span>
-								<img src="images/tray.jpg" alt="" class="img-fluid"/>
+							<div class="boxes mt-4">
+								<h3>Drug Treated</h3>
+								<div class="box-grp">
+									<div class="tray-box">
+										<img src="{{ asset('images/tray.png') }}" class="img-fluid"/>
+										<ul>
+											<li><img id="rat1" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="2" ratNumber="1" counter="200" class="tray-rat" /></li>
+											<li><img id="rat2" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="2" ratNumber="2" counter="210" class="tray-rat" /></li>
+											<li><img id="rat3" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="2" ratNumber="3" counter="205" class="tray-rat" /></li>
+											<li><img id="rat4" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="2" ratNumber="4" counter="198" class="tray-rat" /></li>
+											<li><img id="rat5" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="2" ratNumber="5" counter="199" class="tray-rat" /></li>
+											<li><img id="rat6" src="{{ asset('images/rats/rat-1.png') }}" class="img-fluid tray-rat" ratType="2" ratNumber="6" counter="158" class="tray-rat" /></li>
+										</ul>
+									</div>
+									<div class="tube-box">
+										<img src="{{ asset('images/tube.png') }}" class="img-fluid" />
+										<p>Vehicle</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 video-box-bg">
+							<div class="video-box">
+								<video id="video1" width="250" height="250" controls="" muted="">
+									<source src="{{ asset('images/oral.mp4') }}" id="video2" type="video/mp4">
+								</video>
+							</div>
+							<div class="video-text">
+								<p class="m-0">Counter = <span id="counter-span"></span> </p>
+							</div>
+							<div class="table-responsive">
+								<table class="table table-bordered text-center m-0">
+									<thead>
+										<tr>
+											<th>Group Selected</th>
+											<th>Locomotor Index</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Vehicle</td>	
+											<td class="d-flex"><input id="input-b" style="width:50%" type="text" class="form-control">
+										        <button class="ml-3 btn btn-sm btn-primary" onclick="saveReading()" id="submit-reading">Submit</button>
+										    </td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
-
 				</div>
-				<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-					<div class="table pt-5 pb-4">
+				
+				<div class="pt-3 d-flex">
+					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
+					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
+				</div>
+			</div>
+
+			<div class="tab-pane fade" id="nav-observations-txt" role="tabpanel" aria-labelledby="nav-observations">
+				<div class="main-tab-txt">
+
+				    <div class="table pt-5 pb-4">
+						
 						<h3>Chlopromazing: 3 mg/kg</h3>
 						<table class="table table-bordered text-center">
 							<thead>
-							<tr>
-								<th rowspan="2">Sr. No</th>
-								<th rowspan="2">BW (g)</th>
-								<th rowspan="2" >Dose to be administered (mg) </th>
-								<th scope="col" colspan="2">Locomotor activity score</th>
-								<th scope="col" colspan="1">Difference</th>
-								<th scope="col" rowspan="2" >% Decrease in locomotor activity</th>
-							</tr>
-							<tr>
-								<th>Basel(A)</th>
-								<th>Treatment(B)</th>
-								<th>A-B</th>
-							</tr>
+								<tr>
+									<th rowspan="2">Sr. No</th>
+									<th rowspan="2">BW (g)</th>
+									<th rowspan="2" >Dose to be administered (mg) </th>
+									<th scope="col" colspan="2">Locomotor activity score</th>
+									<th scope="col" colspan="1">Difference</th>
+									<th scope="col" rowspan="2" >% Decrease in locomotor activity</th>
+								</tr>
+								<tr>
+									<th>Basel(A)</th>
+									<th>Treatment(B)</th>
+									<th>A-B</th>
+								</tr>
 							</thead>
 							<tbody>
 							
@@ -132,7 +188,7 @@
 								<td>1</td>	
 								<td>25</td>
 								<td>0.075</td>
-								<td id="ch_1_a"></td>
+								<td id="ch_1_a">135</td>
 								<td id="ch_1_b"></td>
 								<td id="ch_1_ab"></td>
 								<td id="ch_1_per"></td>
@@ -142,7 +198,7 @@
 								<td>2</td>	
 								<td>30</td>
 								<td>0.09</td>
-								<td id="ch_2_a"></td>
+								<td id="ch_2_a">164</td>
 								<td id="ch_2_b"></td>
 								<td id="ch_2_ab"></td>
 								<td id="ch_2_per"></td>
@@ -152,41 +208,40 @@
 								<td>3</td>	
 								<td>32</td>
 								<td>0.096</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td id="ch_3_a">150</td>
+								<td id="ch_3_b"></td>
+								<td id="ch_3_ab"></td>
+								<td id="ch_3_per"></td>
 							</tr>
-
 
 							<tr>
 								<td>4</td>	
 								<td>35</td>
 								<td>0.105</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td id="ch_4_a">140</td>
+								<td id="ch_4_b"></td>
+								<td id="ch_4_ab"></td>
+								<td id="ch_4_per"></td>
 							</tr>
 
 							<tr>
 								<td>5</td>	
 								<td>34</td>
 								<td>0.103</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td id="ch_5_a">137</td>
+								<td id="ch_5_b"></td>
+								<td id="ch_5_ab"></td>
+								<td id="ch_5_per"></td>
 							</tr>
 
 							<tr>
 								<td>6</td>	
 								<td>33</td>
 								<td>0.099</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td id="ch_6_a">158</td>
+								<td id="ch_6_b"></td>
+								<td id="ch_6_ab"></td>
+								<td id="ch_6_per"></td>
 							</tr>
 
 							<tr>
@@ -224,7 +279,7 @@
 							<tr>
 								<th>Basel(A)</th>
 								<th>Treatment(B)</th>
-								<th>A-B</th>
+								<th>B-A</th>
 							</tr>
 							</thead>
 							<tbody>
@@ -233,30 +288,30 @@
 								<td>1</td>	
 								<td>25</td>
 								<td>0.075</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td>135</td>
+								<td id="ca_1_b"></td>
+								<td id="ca_1_ab"></td>
+								<td id="ca_1_per"></td>
 							</tr>
 
 							<tr>
 								<td>2</td>	
 								<td>30</td>
 								<td>0.09</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td>164</td>
+								<td id="ca_2_b"></td>
+								<td id="ca_2_ab"></td>
+								<td id="ca_2_per"></td>
 							</tr>
 
 							<tr>
 								<td>3</td>	
 								<td>32</td>
 								<td>0.096</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td>150</td>
+								<td id="ca_3_b"></td>
+								<td id="ca_3_ab"></td>
+								<td id="ca_3_per"></td>
 							</tr>
 
 
@@ -264,77 +319,57 @@
 								<td>4</td>	
 								<td>35</td>
 								<td>0.105</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td>140</td>
+								<td id="ca_4_b"></td>
+								<td id="ca_4_ab"></td>
+								<td id="ca_4_per"></td>
 							</tr>
 
 							<tr>
 								<td>5</td>	
 								<td>34</td>
 								<td>0.103</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td>137</td>
+								<td id="ca_5_b"></td>
+								<td id="ca_5_ab"></td>
+								<td id="ca_5_per"></td>
 							</tr>
 
 							<tr>
 								<td>6</td>	
 								<td>33</td>
 								<td>0.099</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td>158</td>
+								<td id="ca_6_b"></td>
+								<td id="ca_6_ab"></td>
+								<td id="ca_6_per"></td>
 							</tr>
 							
 							
 							</tbody>
 						</table>
-						<div class="text-right pt-5">
+						<!-- <div class="text-right pt-5">
 							
 							<a href="#" class="btn btn-custom mr-2" id="back2">Back to Experiment</a>
 							<a href="#" class="btn btn-custom custom-2">Conclusion</a>
-						</div>
+						</div> -->
 					</div>
+
 				</div>
-			  </div>
+				
+				<div class="pt-3 d-flex">
+					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
+				</div>
+			</div>
+
 		</div>
 	</div>
-	
-
-
-  
-  <!-- Modal -->
-  <div class="modal fade" id="instructions" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-	  <div class="modal-content">
-		<div class="modal-header bg-purple">
-		  <h3 class="modal-title" id="exampleModalCenterTitle">Instructions</h3>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<div class="modal-body">
-		  <ol>
-			<li>Animals are divided into two groups (6 animals in each).</li>
-			<li>Administer one group with the drug to be tested and other with vehicle by oral route.</li>
-			<li>Put one animal at a time in the Actophotometer</li>
-			<li>Start the instrument</li>
-			<li>Count the locomotor activity for 10 minutes.</li>
-			<li>Repeat the procedure at the interval of 30 minutes.</li>
-			<li>Record the observations.</li>
-			<li>The mice in test group are injected Diazepam (1 Mg /kg Oral) and locomotor activity is measures twice as stated above.</li>
-		  </ol>
-		</div>
-		<div class="modal-footer justfy-content-center bg-danger text-white">
-		  <p>Health Education Bureau</p>
-		</div>
-	  </div>
-	</div>
-  </div>
 </section>
-</div>
+
+
+	@endsection
+	
+	@section('custom_js')
+
+	<script src="{{ asset('front/custom.js') }}"></script>
 @endsection

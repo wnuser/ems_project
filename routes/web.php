@@ -34,8 +34,11 @@ Route::post('admin/update/profile', 'AdminController@updateProfile')->name('admi
 Route::get('admin/change/password', 'AdminController@changePassword')->name('admin.change.password');
 Route::post('admin/save/password',  'AdminController@savePAssword')->name('admin.save.password');
 
+
 /**
  * Experiments routes 
  */
+Route::get('experiment/{id}', 'ExperimentController@experiment')->name('experiment');
 Route::get('actophotometer', 'ExperimentController@actophotometer')->name('actophotometer');
+
 

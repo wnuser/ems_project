@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('experiment_listing');
+        $data  = \App\Models\ExperiementModel::Where('id', '<>', 6)->get();
+        return view('experiment_listing', compact('data'));
     }
 }
