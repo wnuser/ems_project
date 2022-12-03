@@ -29,7 +29,7 @@
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
 						<h2>Introduction</h2>
-						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+						@include('layouts.logout')
 					</div>
 					<h3 class="h3 pb-4">Study of diuretic activity using metabolic cage</h3>
 					<div class="ems-box">
@@ -61,16 +61,16 @@
 					</div>
 				</div>
 				
-				<div class="pt-3 d-flex">
+				<!-- <div class="pt-3 d-flex">
 					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="tab-pane fade" id="nav-instructions-txt" role="tabpanel" aria-labelledby="nav-instructions">
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
 						<h2>Instructions</h2>
-						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+						@include('layouts.logout')
 					</div>
 					<div class="ems-box-white instruction-list">
 						<ul class="list-unstyled">
@@ -87,10 +87,10 @@
 						</ul>
 					</div>
 				</div>
-				<div class="pt-3 d-flex">
+				<!-- <div class="pt-3 d-flex">
 					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
 					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="tab-pane fade" id="nav-experiment-txt" role="tabpanel" aria-labelledby="nav-experiment">
@@ -98,12 +98,11 @@
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
 						<h2>Experiment</h2>
-						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+						@include('layouts.logout')
 					</div>
 					
 					<div class="row align-items-end">
 						<div class="col-md-6">
-
                             <div class="row">
 							    <div class="col-md-6">
 									<div class="form-group">
@@ -204,10 +203,10 @@
 					</div>
 				</div>
 				
-				<div class="pt-3 d-flex">
+				<!-- <div class="pt-3 d-flex">
 					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
 					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="tab-pane fade" id="nav-observations-txt" role="tabpanel" aria-labelledby="nav-observations">
@@ -281,10 +280,10 @@
 
 
 				</div>
-				
+<!-- 				
 				<div class="pt-3 d-flex">
 					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
-				</div>
+				</div> -->
 			</div>
 
 		</div>

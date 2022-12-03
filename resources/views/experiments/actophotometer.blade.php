@@ -10,7 +10,7 @@
 			</div>
 			<div class="nav nav-tabs" id="nav-tab" role="tablist">
 				<button class="nav-link btn-custom active" id="nav-introduction" data-toggle="tab" data-target="#nav-introduction-txt" type="button"><i class="bi bi-grid"></i> Introduction</button>
-				<button class="nav-link btn-custom" id="nav-instructions" data-toggle="tab" data-target="#nav-instructions-txt" type="button"><i class="bi bi-bar-chart"></i> Instructions</button>
+				<button class="nav-link btn-custom" id="nav-instructions" data-toggle="tab" data-target="#nav-instructions-txt"  type="button" ><i class="bi bi-bar-chart"></i> Instructions</button>
 				<button class="nav-link btn-custom" onclick="testfunc()" id="nav-experiment" data-toggle="tab" data-target="#nav-experiment-txt" type="button"><i class="bi bi-chat"></i> Experiment</button>
 				<button class="nav-link btn-custom" id="nav-observations" data-toggle="tab" data-target="#nav-observations-txt" type="button"><i class="bi bi-gear"></i> Observations</button>
 			</div>
@@ -29,7 +29,8 @@
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
 						<h2>Introduction</h2>
-						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+						@include('layouts.logout')
+						
 					</div>
 					<h3 class="h3 pb-4">Effect of drug on Locomotor Activity of Mice using Actophotometer</h3>
 					<div class="ems-box">
@@ -42,16 +43,17 @@
 					</div>
 				</div>
 				
-				<div class="pt-3 d-flex">
-					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
-				</div>
+				<!-- <div class="pt-3 d-flex">
+					<a href="#" class="btn btn-primary glb-btn ml-auto"  data-toggle="tab" data-target="#nav-instructions-txt"  type="button">Next Step: Instructions</a>
+				</div> -->
+
 			</div>
 
 			<div class="tab-pane fade" id="nav-instructions-txt" role="tabpanel" aria-labelledby="nav-instructions">
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
 						<h2>Instructions</h2>
-						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+						@include('layouts.logout')
 					</div>
 					<div class="ems-box-white instruction-list">
 						<ul class="list-unstyled">
@@ -66,17 +68,17 @@
 						</ul>
 					</div>
 				</div>
-				<div class="pt-3 d-flex">
-					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
-					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
-				</div>
+				<!-- <div class="pt-3 d-flex">
+					<a href="#" class="btn btn-primary glb-btn" data-toggle="tab" data-target="#nav-introduction-txt">Previous Step: Introduction</a>
+					<a href="#" class="btn btn-primary glb-btn ml-auto" data-toggle="tab" data-target="#nav-experiment-txt">Next Step: Experiment</a>
+				</div> -->
 			</div>
 
 			<div class="tab-pane fade" id="nav-experiment-txt" role="tabpanel" aria-labelledby="nav-experiment">
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
 						<h2>Experiment</h2>
-						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+						@include('layouts.logout')
 					</div>
 					
 					<div class="row align-items-end">
@@ -154,10 +156,10 @@
 					</div>
 				</div>
 				
-				<div class="pt-3 d-flex">
-					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
-					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
-				</div>
+				<!-- <div class="pt-3 d-flex">
+					<button class="btn btn-primary glb-btn" data-toggle="tab" data-target="#nav-instructions-txt">Previous Step: Instructions</button>
+					<a href="#" class="btn btn-primary glb-btn ml-auto" data-toggle="tab" data-target="#nav-observations-txt">Next Step: Observations</a>
+				</div> -->
 			</div>
 
 			<div class="tab-pane fade" id="nav-observations-txt" role="tabpanel" aria-labelledby="nav-observations">
@@ -357,9 +359,9 @@
 
 				</div>
 				
-				<div class="pt-3 d-flex">
+				<!-- <div class="pt-3 d-flex">
 					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
-				</div>
+				</div> -->
 			</div>
 
 		</div>

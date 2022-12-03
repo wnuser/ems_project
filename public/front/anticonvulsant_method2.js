@@ -37,6 +37,8 @@ $(".tray-rat").click(function () {
   var rat_type   = $(this).attr("ratType");
   var rat_number = $(this).attr("ratNumber");
 
+  var drugType  = $('#drug-type').val();
+
   ratType   = rat_type;
   ratNumber = rat_number;
 
@@ -48,7 +50,7 @@ $(".tray-rat").click(function () {
   video.load();
   video.play();
 
-  drug1  = [0, [62,"Clonic convulsions",4], [55,"Jerky movement & Sturb's tail",5], [72,"Clonic convulsions",3], [75,"Clonic convulsions",5], [67,"Jerky movement & Sturb's tail",3] ];
+  drug1  = [0, [6,"Clonic convulsions",4], [55,"Jerky movement & Sturb's tail",5], [72,"Clonic convulsions",3], [75,"Clonic convulsions",5], [67,"Jerky movement & Sturb's tail",3] ];
   drug2  = [0, [0,"No Convulsions",0], [0,"No Convulsions",0], [130,"Clonic convulsions",2.4], [0,"No Convulsions",0], [120,"Clonic convulsions",2] ];
 
   if(drugType == 'd1') {
@@ -75,18 +77,26 @@ $(".tray-rat").click(function () {
 
 function saveReadings() {
 
-  var data1 = $('#d-1').val();
-  var data2 = $('#d-2').val();
-  var data3 = $('#d-3').val();
+  $('#d-1').val('');
+  $('#d-2').val('');
+  $('#d-3').val('');
 
   var drugType  = $('#drug-type').val();
 
-  console.log(data1, data2, data3,ratType, ratNumber,drugType);
+  console.log(reading1,reading2,reading3, drugType);
 
-  document.getElementById(drugType+"-r-"+ratNumber+"-1").innerHTML = data1;
-  document.getElementById(drugType+"-r-"+ratNumber+"-2").innerHTML = data2;
-  document.getElementById(drugType+"-r-"+ratNumber+"-3").innerHTML = data3;
-  document.getElementById(drugType+"-r-"+ratNumber+"-4").innerHTML = "Recovery";   
+  if(reading1 == 0) {
+    reading1 = '-';
+  }
+
+  if(reading3 == 0) {
+    reading3 = '-';
+  }
+  
+
+  document.getElementById(drugType+"-r-"+ratNumber+"-1").innerHTML = reading1;
+  document.getElementById(drugType+"-r-"+ratNumber+"-2").innerHTML = reading2;
+  document.getElementById(drugType+"-r-"+ratNumber+"-3").innerHTML = reading3;
 }
 
 function handleCounter(start,reading1,reading2,reading3,ratNumber,drugType,defaultcounter) {
@@ -104,7 +114,6 @@ function handleCounter(start,reading1,reading2,reading3,ratNumber,drugType,defau
 
     if(starttime >= reading3) {
       $('#d-3').val(reading3);
-      $('#status').val("Recovery");
     }
 
     if(timeleft <= starttime){

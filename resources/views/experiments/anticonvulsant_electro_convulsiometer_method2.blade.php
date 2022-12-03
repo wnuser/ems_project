@@ -29,7 +29,7 @@
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
 						<h2>Introduction</h2>
-						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+						@include('layouts.logout')
 					</div>
 					<h3 class="h3 pb-4">To study the anticonvulsant effect of drugs (Phenytoin, Diazepam) by Maximal Electro Shock Seizure (MES) and Pentylene-tetrazol Induced Seizure (PTZ) in mice.</h3>
 					
@@ -106,16 +106,17 @@
 					</div>
 				</div>
 				
-				<div class="pt-3 d-flex">
+				<!-- <div class="pt-3 d-flex">
 					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="tab-pane fade" id="nav-instructions-txt" role="tabpanel" aria-labelledby="nav-instructions">
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
 						<h2>Procedure-2: (PTZ Method)</h2>
-						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+						@include('layouts.logout')
+
 					</div>
 					<div class="ems-box-white instruction-list">
 						<ul class="list-unstyled">
@@ -132,10 +133,10 @@
 						</ul>
 					</div>
 				</div>
-				<div class="pt-3 d-flex">
+				<!-- <div class="pt-3 d-flex">
 					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
 					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="tab-pane fade" id="nav-experiment-txt" role="tabpanel" aria-labelledby="nav-experiment">
@@ -143,7 +144,8 @@
 			<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
 						<h2>Experiment</h2>
-						<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+						@include('layouts.logout')
+
 					</div>
 					
 					<div class="row align-items-end">
@@ -171,7 +173,7 @@
 							</div>
                             
 							<div class="boxes">
-								<h3>Vehicle Treated</h3>
+								<!-- <h3>Vehicle Treated</h3> -->
 								<div class="box-grp">
 									<div class="tray-box">
 										<img src="{{ asset('images/tray.png') }}" class="img-fluid"/>
@@ -221,19 +223,19 @@
 								</video>
 							</div>
 							<div class="video-text">
-								<!-- <p class="m-0">Counter = <span id="counter-span"></span> </p> -->
+								<p class="m-0">Counter = <span id="counter-span"></span> </p>
 							</div>
 							<div class="table-responsive" style="width:100%">
 								<table class="table table-bordered text-center m-0">
 									<thead>
 										<tr>
 											<th colspan="3">Time (sec) of different Phases of Seizure</th>
-											<th rowspan="2">Recovery/Death</th>
+											<!-- <th rowspan="2">Saving</th> -->
 										</tr>
 										<tr>
-										    <th>Tonic</th>
-											<th>Clonic</th>
-											<th>Stupor</th>
+										    <th>Onset of time (Sec.)</th>
+											<th>Clonic Convulsion (Sec.)</th>
+											<th>Recovery/Death(Min.)</th>
 											<!-- <th></th> -->
 										</tr>
 									</thead>
@@ -242,13 +244,15 @@
 										<tr>
 										   <td> <input type="text" id="d-1" style="height:40px; width:50px" class="form-control"> </td>
 										   <td> <input type="text" id="d-2" style="height:40px; width:50px" class="form-control"> </td>
-										   <td> <input type="text" id="d-3" style="height:40px; width:50px" class="form-control"> </td>
-										   <td> 
-										      <div class="d-flex">
-												  <input type="text" style="height:40px; width:50px" class="form-control"> 
-                                                   <button class="btn btn-sm btn-primary ml-2" onclick="saveReadings()" >Submit</button>
-											  </div>
+										   <td class="d-flex"> <input type="text" id="d-3" style="height:40px; width:50px" class="form-control"> 
+										   
+										   <button class="btn btn-sm btn-primary ml-2" onclick="saveReadings()" >Submit</button>
+
 										   </td>
+										   <!-- <td> 
+										      <div class="d-flex">
+											  </div>
+										   </td> -->
 										</tr>
 									</tbody>
 								</table>
@@ -257,10 +261,10 @@
 					</div>
 				</div>
 				
-				<div class="pt-3 d-flex">
+				<!-- <div class="pt-3 d-flex">
 					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
 					<a href="#" class="btn btn-primary glb-btn ml-auto">Next Step: Observations</a>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="tab-pane fade" id="nav-observations-txt" role="tabpanel" aria-labelledby="nav-observations">
@@ -370,7 +374,7 @@
 									<th rowspan="2">Treatment</th>
 
 									<th colspan="3">Time (Sec) of different Phases of Seizure</th>
-									<th rowspan="2" colspan="1">Recovery/Death</th>
+									<!-- <th rowspan="2" colspan="1">Recovery/Death</th> -->
 								</tr>
 								<tr>
 									<th>S.N.</th>
@@ -393,7 +397,7 @@
 								<td id="d2-r-1-1"></td>
 								<td id="d2-r-1-2"></td>
 								<td id="d2-r-1-3"></td>
-								<td id="d2-r-1-4"></td>
+								
 							</tr>
 							<tr>
 								<td>2.</td>
@@ -402,7 +406,6 @@
 								<td id="d2-r-2-1"></td>
 								<td id="d2-r-2-2"></td>
 								<td id="d2-r-2-3"></td>
-								<td id="d2-r-2-4"></td>
 							</tr>
 							<tr>
 								<td>3.</td>
@@ -411,7 +414,6 @@
 								<td id="d2-r-3-1"></td>
 								<td id="d2-r-3-2"></td>
 								<td id="d2-r-3-3"></td>
-								<td id="d2-r-3-4"></td>
 							</tr>
 							<tr>
 								<td>4.</td>
@@ -420,7 +422,6 @@
 								<td id="d2-r-4-1"></td>
 								<td id="d2-r-4-2"></td>
 								<td id="d2-r-4-3"></td>
-								<td id="d2-r-4-4"></td>
 							</tr>
 							<tr>
 								<td>5.</td>
@@ -429,7 +430,6 @@
 								<td id="d2-r-5-1"></td>
 								<td id="d2-r-5-2"></td>
 								<td id="d2-r-5-3"></td>
-								<td id="d2-r-5-4"></td>
 							</tr>
 							<tr>
 								<td></td>
@@ -438,7 +438,6 @@
 								<td id="d2-r-5-1"></td>
 								<td id="d2-r-5-2"></td>
 								<td id="d2-r-5-3"></td>
-								<td id="d2-r-5-4"></td>
 							</tr>
 							
 							</tbody>
@@ -453,9 +452,9 @@
 
 				</div>
 				
-				<div class="pt-3 d-flex">
+				<!-- <div class="pt-3 d-flex">
 					<a href="#" class="btn btn-primary glb-btn">Previous Step: Instructions</a>
-				</div>
+				</div> -->
 			</div>
 
 		</div>

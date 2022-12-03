@@ -29,6 +29,10 @@ function aprint($data, $isDie = 1){
         die();
 }
 
+function logout() {
+    
+}
+
 
 
 

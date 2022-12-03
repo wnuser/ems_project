@@ -28,7 +28,26 @@
 			<div class="tab-pane fade show active" id="nav-home-txt" role="tabpanel" aria-labelledby="nav-home">
 				<div class="main-title d-flex align-items-center pb-3">
 					<h2>Experiments</h2>
-					<a href="#" class="btn btn-primary ml-auto"><i class="bi bi-person"></i></a>
+					@include('layouts.logout')
+
+
+					<!-- <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li> -->
 				</div>
 				<div class="home-list">
 					<ul class="list-unstyled">
