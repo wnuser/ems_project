@@ -6,15 +6,17 @@
 <section class="main-bg">
 	<div class="inner-wrap-main">
 		<div class="ems-left">
+
 			<div class="ems-logo">
-				<a href="#"><img src="{{ asset('images/ems-logo.png') }}" /></a>
+                @include('layouts.logo')			
 			</div>
+			
 			<div class="nav nav-tabs" id="nav-tab" role="tablist">
 				<button class="nav-link btn-custom active" id="nav-home" data-toggle="tab" data-target="#nav-home-txt" type="button"><i class="bi bi-grid"></i> Home</button>
 				<button class="nav-link btn-custom" id="nav-help" data-toggle="tab" data-target="#nav-help-txt" type="button"><i class="bi bi-bar-chart"></i> Help</button>
 				<button class="nav-link btn-custom" id="nav-disclaimer" data-toggle="tab" data-target="#nav-disclaimer-txt" type="button"><i class="bi bi-chat"></i> Disclaimer</button>
 			</div>
-			<div class="ems-left-bottom">
+			<div class="ems-left-bottom mt-5">
 				<div class="ems-btm-bg">
 					<h3>Support 24/7</h3>
 					<h4>Contacts us anytime</h4>

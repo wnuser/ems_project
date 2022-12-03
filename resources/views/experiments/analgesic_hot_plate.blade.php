@@ -6,7 +6,7 @@
 	<div class="inner-wrap-main">
 		<div class="ems-left">
 			<div class="ems-logo">
-				<a href="{{ route('home') }}"><img src=" {{ asset('images/ems-logo.png') }} " /></a>
+			@include('layouts.logo')
 			</div>
 			<div class="nav nav-tabs" id="nav-tab" role="tablist">
 				<button class="nav-link btn-custom active" id="nav-introduction" data-toggle="tab" data-target="#nav-introduction-txt" type="button"><i class="bi bi-grid"></i> Introduction</button>

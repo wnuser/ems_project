@@ -6,7 +6,7 @@
 	<div class="inner-wrap-main">
 		<div class="ems-left">
 			<div class="ems-logo">
-				<a href="{{ route('home') }}"><img src=" {{ asset('images/ems-logo.png') }} " /></a>
+			@include('layouts.logo')
 			</div>
 			<div class="nav nav-tabs" id="nav-tab" role="tablist">
 				<button class="nav-link btn-custom active" id="nav-introduction" data-toggle="tab" data-target="#nav-introduction-txt" type="button"><i class="bi bi-grid"></i> Introduction</button>
@@ -28,7 +28,7 @@
 			<div class="tab-pane fade show active" id="nav-introduction-txt" role="tabpanel" aria-labelledby="nav-introduction">
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
-						<h2>Introduction</h2>
+						<h2>Principle</h2>
 						@include('layouts.logout')
 					</div>
 					<h3 class="h3 pb-4">EFFECT OF CNS SUPPRESSANT AND SKELATEL MUSCLE RELAXANT DRUG ON MICE USING ROTAROD APPARATUS</h3>
@@ -38,7 +38,9 @@
 						</div>
 						<div class="ems-box-text">
 							<p class="text-white">
-                                Rotarod apparatus has a horizontal grooved rod rotating at a fixed speed. The mice are made to balance on this rod. Dependent upon their motor co-ordination, Central nervous activity and grip strength the animal either stay on the rotating rod for specific time and after that fall down on the platform of each compartment. The floor of each compartment has sensors that deactivate the timers and the exact fall off time for each rat is displayed on the respective display.                            </p>
+                            One of the important pharmacological actions of antianxiety agents of benzodiazepine class of drugs is muscle relaxing property. The skeletal muscle relaxation together with taming or calming effect these agents reduce anxiety and tension. The loss of muscle-grip is an indication of muscle relaxation. This effect can be easily studied in animals using inclined plane or rotating rods .The difference in the fall off time from the rotating rod between the control and diazepam-treated animal is taken as an index of muscle relaxation. The angle of the slope of the inclined plane, or the rate of rotation of the rod should be adjusted such that a normal mouse can stay on the plane or on the rod for an appreciable period (3-5 min) of time.
+
+							</p>
 						</div>
 					</div>
 				</div>

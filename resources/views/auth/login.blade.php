@@ -7,7 +7,7 @@
 	<img src="{{ asset('images/Subtract.png') }}" class="login-2 login-ab" />
 	<img src="{{ asset('images/grp-1.png') }}" class="login-3 login-ab" />
 	<div class="ems-logo">
-		<a href="#"><img src="{{ asset('images/ems-blue-logo.png') }}" /></a>
+		<a href="{{ route('home') }}"><img  src="{{ asset('images/ems-blue-logo.png') }}" /></a>
 	</div>
 	<div class="login-form">
 
