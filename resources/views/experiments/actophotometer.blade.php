@@ -28,7 +28,7 @@
 			<div class="tab-pane fade show active" id="nav-introduction-txt" role="tabpanel" aria-labelledby="nav-introduction">
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
-						<h2>Introduction</h2>
+						<h2>Princple</h2>
 						@include('layouts.logout')
 						
 					</div>
@@ -38,7 +38,10 @@
 							<img src="{{ asset('images/actophotometer.jpg') }}" alt="" class="img-fluid"/>
 						</div>
 						<div class="ems-box-text">
-							<p class="text-white">Actophotometer has a central chamber with arrangement of light sources and photocells at the base of two opposite walls.The light of each source is focused on a photocell. Any Interruption in the path of light activates the photocells and this is counted as a measure of horizontal locomotor activity of the mice kept in the chamber.</p>
+							<p class="text-white">
+							Most of the central nervous system acting drugs influence the locomotor activities in man and animals. The CNS depressant drugs such as barbiturates and alcohol reduce the motor activity while the stimulants such as caffeine and amphetamines increase the activity. In other words, the locomotor activity can be an index of wakefulness (alertness) of mental activity. The locomotor activity (horizontal activity) can be easily measured using an actophotometer which operates on photoelectric cells which are connected in circuit with a counter. When the beam of light falling on the photocell is cut off by the animal, a count is recorded . An actophotometer could have either circular or square arena in which the animal moves, Both rats and mice may be used for testing in this equipment.
+							
+							</p>
 						</div>
 					</div>
 				</div>

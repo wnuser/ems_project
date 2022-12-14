@@ -28,7 +28,7 @@
 			<div class="tab-pane fade show active" id="nav-introduction-txt" role="tabpanel" aria-labelledby="nav-introduction">
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
-						<h2>Introduction</h2>
+						<h2>Principle</h2>
 						@include('layouts.logout')
 					</div>
 					<h3 class="h3 pb-4">To study the anticonvulsant effect of drugs (Phenytoin, Diazepam) by Maximal Electro Shock Seizure (MES) and Pentylene-tetrazol Induced Seizure (PTZ) in mice.</h3>
@@ -44,7 +44,10 @@
 						</div>
 						<div class="ems-box-text">
 							<p class="text-white">
-							Electroconvulsiometer is used to deliver the electric shock of required intensity for required intensity for required duration. This instrument is used to evaluate the anticonvulsant effect of pharmacological agents against electro shock induced convulsions in experimental animals. An electrical stimulus with an intensity that induced characteristic convulsion is applied to the animals through the electrode placed on ear pinna. The duration of tonic and clonic seizures are measured. The drug to be tested is administered to separate group of animals and its effect on such duration on such convulsions is measured. Anticonvulsant pharmacological agents reduce the duration of seizures induced by electrical shocks.
+							Different types of epilepsies, i.e., grand mal, petit mal or psychomotor type, can be studied in laboratory animals. The maximal electro-shock (MES)-induced convulsions in animals represent grand mal type of epilepsy. Similarly, chemo-convulsions due to pentylenetetrazol which produce clonic-type of convulsions resemble petit mal type of convulsions in man. These are the two procedures used to study convulsions, and to test anticonvulsant drugs in laboratory animals.
+In MES-convulsions electroshock is applied through the corneal electrodes. Through optic stimulation cortical excitation is produced. The MES-convulsions are divided into five phases such as (a) tonic flexion, (b) tonic extensor, (c) clonic convulsions, (d) stupor, and (e) recovery or death. A substance is known to possess anticonvulsant property if it reduces or abolishes the extensor phase of MES convul- sions. This procedure may be used to produce convulsions both in rats and mice.
+It is advised that the students should have complete background of the pharmacology of antiepileptic drugs before performing this experiment.
+
 							</p>
 
 							

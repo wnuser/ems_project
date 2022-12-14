@@ -28,7 +28,7 @@
 			<div class="tab-pane fade show active" id="nav-introduction-txt" role="tabpanel" aria-labelledby="nav-introduction">
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
-						<h2>Introduction</h2>
+						<h2>Principle</h2>
 						@include('layouts.logout')
 					</div>
 					<h3 class="h3 pb-4">Study of diuretic activity using metabolic cage</h3>
@@ -38,12 +38,12 @@
 						</div>
 						<div class="ems-box-text">
 							<p class="text-white">
-							Diuretics are the drugs which increases the formation & flow of urine. Diuresis or increased production of urine is produced by these drugs by acting on renal or kidney nephron. They act by inhibiting some ion channel transporters like Na+-K+-2Cl- co-transport, Na+-Cl- symport, etc. Mainly used for the treatment of Oedema and Hypertension. 
-							</p>
-							<p class="text-white"> Normal urine output in rats is very small (1-2 ml/day). Hence to get the measurable quantity the animals are first hydrated by adding glucose in drinking water. The urine output is increased after administration of diuretics like Acetazolamide, hydrochlorthiziade and frusemide. Increase in volume of urine is measured with the help of measuring cylinder and compared with the normal urine output.
+							Diuretics are the compounds which increase the flow of urine. Normal urine output in rats is very small (1-2 ml/rat/day). Hence, to get the measurable quantity the animals are first hydrated. The urine output is increased after administration of diuretics like urea and Furosemide, Urea, Chlorthiazide, Hydroflumethizide. Increase in volume of urine is measured with the help of measuring cylinder and compared with the normal urine output.							</p>
+							
+							<!-- <p class="text-white"> Normal urine output in rats is very small (1-2 ml/day). Hence to get the measurable quantity the animals are first hydrated by adding glucose in drinking water. The urine output is increased after administration of diuretics like Acetazolamide, hydrochlorthiziade and frusemide. Increase in volume of urine is measured with the help of measuring cylinder and compared with the normal urine output.
 							</p>
 							<p class="text-white"> Metabolic cages are specially designed apparatus for rodents urine collection with minimum stress to the animals. These provide a perfect separation of urine and feces by a provision in funnel or separation cone.
-							</p>
+							</p> -->
 							
 						</div>
 					</div>

@@ -28,7 +28,7 @@
 			<div class="tab-pane fade show active" id="nav-introduction-txt" role="tabpanel" aria-labelledby="nav-introduction">
 				<div class="main-tab-txt">
 					<div class="main-title d-flex align-items-center pb-3">
-						<h2>Introduction</h2>
+						<h2>Principle</h2>
 						@include('layouts.logout')
 					</div>
 					<h3 class="h3 pb-4">Study of analgesic activity with the help of “hot plate apparatus”</h3>
@@ -38,8 +38,10 @@
 						</div>
 						<div class="ems-box-text">
 							<p class="text-white">
-							Eddy’s hot plate: The hot plate test is a test of the pain response in animals, similar to the tail flick test. Both hot plate and tail-flick methods are used generally for centrally acting analgesic, while peripherally acting drugs are ineffective in these tests but sensitive to acetic acid-induced writhing test.
-                            </p><p class="text-white">  The hot plate test is used in basic pain research and in testing the effectiveness of analgesics by observing the reaction to pain caused by heat. It was proposed by Eddy and Leimbach in 1953. They used a behavioral model of nociception where behaviors such as jumping and hind paw-licking are elicited following a noxious thermal stimulus. Licking is a rapid response to painful thermal stimuli that is a direct indicator of nociceptive threshold. Jumping represents a more elaborated response, with a latency and encompasses an emotional component of escaping.
+
+							In this method heat is used as a source of pain. Animals are individually placed on a hot plate maintained at constant temperature (55±2°C) and the reaction of animals, such as paw licking or jump response is taken as the end point. Analgesics increase the reaction-time. The method was first described by Eddy and Leimbach (1953).                            </p>
+							
+							<!-- <p class="text-white">  The hot plate test is used in basic pain research and in testing the effectiveness of analgesics by observing the reaction to pain caused by heat. It was proposed by Eddy and Leimbach in 1953. They used a behavioral model of nociception where behaviors such as jumping and hind paw-licking are elicited following a noxious thermal stimulus. Licking is a rapid response to painful thermal stimuli that is a direct indicator of nociceptive threshold. Jumping represents a more elaborated response, with a latency and encompasses an emotional component of escaping. -->
 							
 							</p>
 						</div>
